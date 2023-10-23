@@ -1,14 +1,4 @@
   <!-- Footer Section Start -->
-  <footer class="footer">
-          <div class="footer-body">
-              <ul class="left-panel list-inline mb-0 p-0">
-                  
-              </ul>
-              <div class="right-panel">
-                  Centro Carismático San Martin de Porres
-              </div>
-          </div>
-      </footer>
       <!-- Footer Section End -->    </main>
     
      

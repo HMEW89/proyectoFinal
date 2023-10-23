@@ -1,48 +1,74 @@
-<div class="row">
-  <div class="col-md-1"></div>
-  <div class="col-md-10">
-    <div class="right_col card" role="main">
-      <div class="">
-        <div class="page-title">
-          <div class="title_left"><br>
-            <h1>Solicitantes </h1>
+<div class="x_content">
+  <div class="page-inner">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header">
+            <div class="d-flex align-items-center">
+              <h2>Solicitantes</h2>
+              <button class="btn btn-primary btn-round ml-auto" data-toggle="modal" data-target="#NuevoSolicitante">
+                <i class="btn-inner">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                  </svg>
+                </i>
+                <span>Nuevo Solicitante</span>
+              </button>
+            </div>
           </div>
+          <div class="card-body">
+            <!-- Modal -->
+            <div class="modal fade" id="NuevoSolicitante" tabindex="-1" role="dialog" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header no-bd">
+                    <h1 class="modal-title">
+                      <span class="fw-mediumbold">
+                        Nuevo</span>
+                      <span class="fw-light">
+                        Solicitante
+                      </span>
+                    </h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form class="" action="<?php echo base_url(); ?>index.php/solicitante/agregarbd" autocomplete="off" method="post" onsubmit="return validarFormulario()">
+                      <span class="section"></span>
+                      <div class="field item form-group">
+                        <label class="col-form-label   label-align">Ci/Nit: <span class="required">*</span></label>
+                        <div class="col-md-10 col-sm-10">
+                          <input class="form-control" class='optional' id="carnet" name="carnet" autocomplete="off" type="text" required="required" onblur="validarCarnet()" />
+                          <span id="errorCarnet" class="error"></span>
+                        </div>
+                      </div>
+                      <div class="field item form-group">
+                        <label class="col-form-label   label-align">Razón Social: <span class="required">*</span></label>
+                        <div class="col-md-10 col-sm-10">
+                          <input class="form-control" class='optional' name="nombres" autocomplete="off" type="text" required="required" onblur="validarNombres()" />
+                          <span id="errorNombres" class="error"></span>
+                        </div>
+                      </div>
+                      <div class="field item form-group">
+                        <div class="col-md-6 col-sm-6">
+                          <input class="form-control" type="hidden" autocomplete="off" name="idUsuario" value="<?php echo $this->session->userdata('id'); ?>" />
+                        </div>
+                      </div>
 
-
-        </div>
-
-        <div class="clearfix"></div>
-
-        <div class="row">
-          <div class="col-md-11 col-sm-11 ">
-            <div class="x_panel">
-              <div class="x_title">
-                <h2><small></small></h2>
-                <ul class="nav navbar-right panel_toolbox">
-                </ul>
-                <div class="clearfix">
-                  <div class="row">
-                    <div class="col-md-5"></div>
-                    <div class="col-md-4"></div>
-                    <div class="col-md-3 text-right"><a href="<?php echo base_url(); ?>index.php/solicitante/agregar" class="text-left">
-                        <button type="button" class="btn btn-primary">
-                          <i class="btn-inner">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                            </svg>
-                          </i>
-                          <span>Nuevo Solicitante</span>
-                        </button>
-                      </a></div>
+                      <div class="ln_solid">
+                        <div class="form-group">
+                          <button type='submit' class="btn btn-primary">Agregar</button>
+                          <button type='reset' class="btn btn-success">Limpiar</button>
+                        </div>
+                      </div>
+                    </form>
                   </div>
                 </div>
-              </div><br>
-              <div class="x_content">
-                <div class="row">
-                  <div class="col-sm-11">
-
-                    <div class="card-box table-responsive">
-                      <table id="tabla" class="table table-striped table-bordered" style="width:100%">
+              </div>
+            </div>
+              <div class="table-responsive">
+              <table id="tabla" class="table table-striped table-bordered" style="width:100%">
                         <thead>
                           <tr>
                             <th>No</th>
@@ -108,9 +134,6 @@
                           ?>
                         </tbody>
                       </table>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -118,8 +141,3 @@
       </div>
     </div>
   </div>
-</div>
-<div class="col-md-1"></div>
-</div>
-</div>
-</div>
