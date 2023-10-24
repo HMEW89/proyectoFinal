@@ -32,20 +32,20 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
-                  </div>
+                  </div><hr>
                   <div class="modal-body">
                     <form class="" action="<?php echo base_url(); ?>index.php/solicitante/agregarbd" autocomplete="off" method="post" onsubmit="return validarFormulario()">
                       <span class="section"></span>
                       <div class="field item form-group">
-                        <label class="col-form-label   label-align">Ci/Nit: <span class="required">*</span></label>
-                        <div class="col-md-10 col-sm-10">
+                        <label class="col-form-label "><h4>Ci/Nit: <span class="required">*</span></h4></label>
+                        <div class="col-md-12 col-sm-12">
                           <input class="form-control" class='optional' id="carnet" name="carnet" autocomplete="off" type="text" required="required" onblur="validarCarnet()" />
                           <span id="errorCarnet" class="error"></span>
                         </div>
                       </div>
                       <div class="field item form-group">
-                        <label class="col-form-label   label-align">Razón Social: <span class="required">*</span></label>
-                        <div class="col-md-10 col-sm-10">
+                        <label class="col-form-label "><h4>Razón Social: <span class="required">*</span></h4></label>
+                        <div class="col-md-12 col-sm-12">
                           <input class="form-control" class='optional' name="nombres" autocomplete="off" type="text" required="required" onblur="validarNombres()" />
                           <span id="errorNombres" class="error"></span>
                         </div>
