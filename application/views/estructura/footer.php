@@ -55,7 +55,7 @@
   <script src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
   <script type="text/javascript">
     $(document).ready(function() {
-      $('#tabla').DataTable({
+      $('#table').DataTable({
         "language": {
           "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
         }
